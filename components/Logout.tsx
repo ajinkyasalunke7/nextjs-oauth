@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Loader from "./Loader";
+import { logout } from "@/actions/auth";
 
 const Logout = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -8,6 +9,7 @@ const Logout = () => {
   const handleLogout = () => {
     setIsLoading(true); // Activate the loader
     setTimeout(() => {
+      logout();
       console.log("Logged out successfully"); // Simulated logout logic
       setIsLoading(false); // Disable the loader
     }, 3000); // Simulate logout delay of 3000ms
