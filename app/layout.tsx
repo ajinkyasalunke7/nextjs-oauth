@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +24,8 @@ export default async function RootLayout({
       <html lang="en">
         <body className={`${outfit.className} antialiased`}>
           <div className="mx-auto max-w-screen-lg h-screen flex flex-col">
-            <Navbar />
+            <Header />
+            {/* <Navbar /> */}
             <div className="flex-grow">{children}</div>
           </div>
         </body>
