@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
-import Loader from "./Loader";
+// import { useState } from "react";
+// import Loader from "./Loader";
 import { logout } from "@/actions/auth";
 
 const Logout = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
   const handleLogout = () => {
     setIsLoading(true); // Activate the loader
